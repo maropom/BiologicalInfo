@@ -1,16 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14256" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="17701" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch40"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14243"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14219"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="17500"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="BiologicalInfo_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <switch width="1" alignment="left" value="YES" title="WorkOut" id="E0H-WR-UtE">
+                            <connections>
+                                <action selector="switchActionWorkoutStatus:" destination="AgC-eL-Hgc" id="i4O-In-FcL"/>
+                            </connections>
+                        </switch>
+                        <group width="136" height="24" alignment="left" id="iRM-mu-Msr"/>
+                        <label width="136" height="29" alignment="left" id="jph-Nb-Q3z"/>
+                        <group width="1" height="14" alignment="left" id="Jkc-2s-7Xw"/>
+                        <group width="1" height="46" alignment="left" id="cdP-Gz-GN7">
+                            <items>
+                                <group width="55" alignment="left" id="vRF-Kd-1KE"/>
+                                <imageView width="52" height="45" alignment="left" image="heart" id="ctj-wn-QgC"/>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="labelHeartLatest" destination="jph-Nb-Q3z" id="4R2-IA-0vp"/>
+                    </connections>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="345"/>
+            <point key="canvasLocation" x="219.95061728395061" y="332.6649746192893"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -32,16 +53,19 @@
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModuleProvider="target"/>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="BiologicalInfo_WatchKit_App" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="468" y="643"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="Niz-AI-uX2">
             <objects>
-                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModuleProvider="target"/>
+                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="BiologicalInfo_WatchKit_App" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="468" y="345"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="heart" width="65.5" height="59.5"/>
+    </resources>
 </document>
